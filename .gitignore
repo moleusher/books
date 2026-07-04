@@ -1,0 +1,15 @@
+# Credentials — DO NOT COMMIT
+.env
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+env chartocr/
+env/
+
+# Large parsed outputs (keep scripts + PDFs only)
+*/images/

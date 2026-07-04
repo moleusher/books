@@ -1,0 +1,53 @@
+{
+  "description": "Monomer conversion vs time at 140\u00b0C",
+  "x_label": "time (s)",
+  "y_label": "conversion X",
+  "x_range": [
+    0,
+    2000
+  ],
+  "y_range": [
+    0,
+    1
+  ],
+  "plot_bounds_px": {
+    "top": 47,
+    "bottom": 743,
+    "left": 195,
+    "right": 1110
+  },
+  "points": [
+    {
+      "time_s": 42.6,
+      "conversion": 0.053879
+    },
+    {
+      "time_s": 241.5,
+      "conversion": 0.229167
+    },
+    {
+      "time_s": 304.0,
+      "conversion": 0.27864
+    },
+    {
+      "time_s": 430.6,
+      "conversion": 0.33908
+    },
+    {
+      "time_s": 581.6,
+      "conversion": 0.453927
+    },
+    {
+      "time_s": 870.1,
+      "conversion": 0.64933
+    },
+    {
+      "time_s": 984.9,
+      "conversion": 0.881343
+    },
+    {
+      "time_s": 1519.1,
+      "conversion": 0.994964
+    }
+  ]
+}

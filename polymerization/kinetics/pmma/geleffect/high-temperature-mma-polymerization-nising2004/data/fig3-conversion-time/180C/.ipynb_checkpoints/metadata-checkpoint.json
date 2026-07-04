@@ -1,0 +1,59 @@
+{
+  "image": "/home/admin/books/polymerization/kinetics/pmma/geleffect/high-temperature-mma-polymerization-nising2004/images/fig3 monomer conversion evolution-180\u2103.png",
+  "color": "blue",
+  "pixel_bounds": {
+    "x_min": 212.5,
+    "x_max": 1059.0,
+    "y_min": 29.0,
+    "y_max": 704.0
+  },
+  "physical_bounds": {
+    "x_min": 0.0,
+    "x_max": 2000.0,
+    "y_min": 0.0,
+    "y_max": 1.0
+  },
+  "n_points": 10,
+  "points": [
+    {
+      "x": -6.93,
+      "y": -0.000839
+    },
+    {
+      "x": 134.83,
+      "y": 0.296939
+    },
+    {
+      "x": 234.06,
+      "y": 0.396198
+    },
+    {
+      "x": 305.97,
+      "y": 0.463704
+    },
+    {
+      "x": 463.24,
+      "y": 0.562124
+    },
+    {
+      "x": 666.43,
+      "y": 0.621383
+    },
+    {
+      "x": 891.91,
+      "y": 0.662222
+    },
+    {
+      "x": 1173.07,
+      "y": 0.672593
+    },
+    {
+      "x": 1483.76,
+      "y": 0.680741
+    },
+    {
+      "x": 1799.17,
+      "y": 0.682963
+    }
+  ]
+}
