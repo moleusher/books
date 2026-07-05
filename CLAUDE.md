@@ -15,7 +15,7 @@ scripts/               Extraction scripts: extract_<temp>C_<color>.py
 ## Virtual Environment
 Path:    /home/admin/books/env chartocr/bin/python3
 Install: /home/admin/books/env chartocr/bin/pip install <pkg>
-Libraries: opencv-python, numpy, pandas, matplotlib, scipy, Pillow, paddleocr
+Libraries: opencv-python-headless (NOT opencv-python/contrib — conflicts on headless servers), numpy, pandas, matplotlib, scipy, Pillow, paddleocr
 
 ## Key Skills
 Trigger via Skill tool or /<name> when conditions match:
