@@ -1,0 +1,13 @@
+error estimates to predict the effect of increasing polynomial order by
+
+ $$ \begin{array}{r c l}{\mathrm{e p s}_{1}^{(m)}}&{=}&{\left\|p_{r+e_{1}}^{(m)}(t)-p_{r}^{(m)}(t)\right\|_{D^{(m)}}=\left(\gamma_{r_{1}+1}^{(m,1)}\displaystyle\sum_{k=0}^{r_{2}}\gamma_{k}^{(m,2)}\left(a_{r_{1}+1,k}^{(m)}\right)^{2}\right)^{1/2}}\end{array} $$ 
+
+and analogously
+
+ $$ \begin{array}{r c l}{\mathrm{e p s}_{2}^{(m)}}&{=}&{\left\|p_{r+e_{2}}^{(m)}(t)-p_{r}^{(m)}(t)\right\|_{D^{(m)}}=\left(\gamma_{r_{2}+1}^{(m,2)}\displaystyle\sum_{k=0}^{r_{1}}\gamma_{k}^{(m,1)}\left(a_{k,r_{2}+1}^{(m)}\right)^{2}\right)^{1/2}}\end{array} $$ 
+
+Having in mind that the elements  $ D^{(m)} $ are just tensor products of 1d intervals  $ I^{(m,1)} $ and  $ I^{(m,2)} $ the techniques described in [35] can directly be applied to the single coordinate axes. In view of an efficient algorithmic realization, the domain-order-pattern is chosen and changed such that the amount of work necessary to compute the final approximation is as small as possible. Therefore only rectangles are changed with a local error larger than some threshold. The threshold is computed based on all error predictions such that the errors within the decomposition are equilibrated. However, one cannot set up a local tolerance for single domains a priori, since the number of domains on the final level is not known beforehand. Additionally all refinement steps are chosen in view of the obtained (and necessary) gain of accuracy per work.
+
+From time step to time step of the ROM, the grid has to be coarsened in some sense, since otherwise moving peaks or changing shapes would lead to a monotone increase of expansion coefficients. For the coarsening the error estimates and the now available average error per element are used: All domains having a local error lower than a certain percentage of the average error will be changed by reducing the polynomial order by one. If a minimal polynomial order is reached, such elements  $ D^{(m)} $ will be merged with neighbors  $ D^{(n)} $ with  $ L^{(m,i)} = L^{(n,i)} \wedge U^{(m,i)} = U^{(n,i)} $ for at least one dimension i. This strategy is grid-conservative and flexible at the same time. Additionally, the number of levels required to fulfill the stationary tolerance of the next time step is kept small.
+
+Adaptation of overall discretization domain. In the one-dimensional case an update of  $ x_{\text{max}} $ can easily be realized by adding or deleting intervals at the right boundary. This is more complicated for the higher-dimensional case, since here all directions are affected simultaneously. Therefore all coordinate directions are stretched or compressed by the factor  $ f_i = (y_{\text{max},i} +  $

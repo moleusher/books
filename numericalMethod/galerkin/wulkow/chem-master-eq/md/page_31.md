@@ -1,0 +1,110 @@
+<table border=1 style='margin: auto; width: max-content;'>
+  <thead><tr><th style='text-align: center;'>Category</th><th style='text-align: center;'>(mH)</th><th style='text-align: center;'>(mH) Error Bar</th></tr></thead>
+  <tbody>
+    <tr><td style='text-align: center;'>1</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>2</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>3</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>4</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>5</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>6</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>7</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>8</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>9</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>10</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>11</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>12</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>13</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>14</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>15</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>16</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>17</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>18</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>19</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>20</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>21</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>22</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>23</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>24</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>25</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>26</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>27</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>28</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>29</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>30</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>31</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>32</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>33</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>34</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>35</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>36</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>37</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>38</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>39</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>40</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>41</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>42</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>43</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>44</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>45</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>46</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>47</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>48</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>49</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>50</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>51</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>52</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>53</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>54</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>55</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>56</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>57</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>58</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>59</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>60</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>61</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>62</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>63</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>64</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>65</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>66</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>67</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>68</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>69</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>70</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>71</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>72</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>73</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>74</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>75</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>76</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>77</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>78</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>79</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>80</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>81</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>82</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>83</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>84</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>85</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>86</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>87</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>88</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>89</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>90</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>91</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>92</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>93</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>94</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>95</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>96</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>97</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>98</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>99</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+    <tr><td style='text-align: center;'>100</td><td style='text-align: center;'>0.080</td><td style='text-align: center;'>[0.040, 0.120]</td></tr>
+  </tbody>
+</table>
+
+<div style="text-align: center;"><img src="imgs/img_in_image_box_384_270_820_1142.jpg" alt="Image" width="36%" /></div>
+
+
+<div style="text-align: center;">Figure 8: Solution of the CME (3.31), (3.32). In contrast to Figure 7, the state space has been increased considerably by choosing N = 10000 (TOL = 0.05), but the PDF is shown at time t = 4 instead of t = 5. In the lower panel, the probability distribution is visualized in three dimensions (top view).</div>

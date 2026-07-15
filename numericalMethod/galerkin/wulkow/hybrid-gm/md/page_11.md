@@ -1,0 +1,27 @@
+than for the CLD itself and this is a main argument for this hybrid algorithm.
+
+For the computation of the MC averages we again have applied a grid-based interpolation technique. Actually, one should not base the convergence analysis on single runs of the MC method, but use mean values of several realizations. In practice, however, a modeler will try to get important structure information from one or very few simulations. Therefore we try to mimic this behavior in our numerical experiments. In the next example we will see, that sometimes at least a few realizations have to be averaged.
+
+At last we take a look at the full ensemble of chains. The three graphics of Figure 7 show, how nicely the hybrid MC algorithm behaves here. For  $ t = 60 \, s $, the distribution of fractions vs. chain-length is relatively narrow (scenario MC 500–5000), and the average (automatic polynomial regression) is very close to the average  $ \overline{F}_2(s, 60) $ of the h-p-method. For  $ t = 600 \, s $ the single chains are broadly distributed, but again the average is nicely captured. In Figure 7c one can see, that if only 100 and 500 chains are used, the structure of the full distribution is still visible with very accurate average. Besides, for this simple curve-structure a polynomial regression might be sufficient, but the h-p-interval-based approach (used in Figure 6) is more general and can be done automatically.
+
+In retrospect, we have seen that with the hybrid approach we have combined the advantages of both worlds by computing the basic chain-length distributions deterministically and add further properties using a MC (SSA) based on relatively small ensembles of chains. In particular we could present the full chemical distribution with much less effort than in a full-scale SSA.
+
+## Additional Long-Chain Branching with Forward Coupling
+
+For our second examination we extend the previous example by a transfer-to-polymer reaction and assume, that each transfer step will lead to a long-chain branch (LCB). A more practical example including the formation of secondary radicals and subsequent  $ \beta $-scission might be considered in a forthcoming article. For now, we add another index j to the system counting the number of LCBs in chains of length s with i comonomer units, i.e., we consider polymer species  $ P_{s,ij} $ and  $ D_{s,ij} $. The basic reaction scheme then is:
+
+ $$ \begin{array}{c}C\xrightarrow{k_{a}}P_{1,0,0}\\P_{s,i,j}+M_{1}\xrightarrow{k_{p_{1}}}P_{s+1,i,j}+C_{1}\\P_{s,i,j}+M_{2}\xrightarrow{k_{p_{2}}}P_{s+1,i+1,j}+C_{2}\\P_{s,i,j}\xrightarrow{k_{d}}D_{s,i,j}\\r,i,j+D_{r,k,l}\xrightarrow{g(r,k,l)k_{tr}}D_{s,i,j}+P_{r,k,l+1}\end{array} $$ 
+
+with reaction rate coefficient  $ k_{tr} $ from Table 3. Its value has been set in order to generate a final polydispersity of about 7, which is fairly (but not too) broad. A reduction to an only chain-length-based description reads (introducing another counter species  $ C_{lcb} $):
+
+The rate function  $ g(r, k, l) $ of the three-dimensional model is crucial for the reaction rate of the transfer-to-polymer step. For example, if the transfer can only occur (once) at comonomer units, we have  $ g(r, k, l) = k - l $. If the transfer is possible along the whole chain, one often sets  $ g(r, k, l) = r - l \approx r $. For the reduced system (32), the rate function has to be replaced by an average. Here typical settings are  $ \tilde{g}(r) = F_2(t) $,  $ F_2(t) $ the accumulated fraction of monomer  $ M_2 $ in the whole polymer, or more accurately:
+
+ $$ \begin{array}{c}C\xrightarrow{k_{a}}P_{1}\\P_{s}+M_{1}\xrightarrow{k_{p_{1}}}P_{s+1}+C_{1}\\P_{s}+M_{2}\xrightarrow{k_{p_{2}}}P_{s+1}+C_{2}\\P_{s}\xrightarrow{k_{d}}D_{s}\\P_{s}+D_{r}\xrightarrow{\tilde{g}(r)}D_{s}+P_{r}+C_{lcb}\end{array} $$ 
+
+This means, that we count the overall number of incorporated comonomer molecules and the number of branches and assume, that all chains have an average composition and branching structure. Despite this strong assumption, such models have turned out to be quite successful in applications. However, it is one major aspect of the hybrid method to study and validate (or falsify) such assumptions without too much mathematical and numerical effort. In Figure 7a–c we could observe, that with increasing reaction time the average number of comonomer units describes the full distribution of chains less and less. Thus the task of this example is to check the effect of distributed fractions. Since the number of transfer-reactions is small compared to the number of comonomers (i.e.,  $ C_2 \ll C_{lcb} $) in this example, for ease of presentation we will not consider the aspect of “consumed bonds” used described in numerator of (33). If one applies the balance distribution calculus to the full system (31), one can define a refined rate function by:
+
+ $$ \tilde{g}(r,t)=\frac{C_{2}(t)-C_{lcb}(t)}{C_{1}(t)+C_{2}(t)}r. $$ 
+
+with  $ \overline{F}_{2}(r,t) $ again the chain-length dependent fraction of the comonomer. Before we discuss the results, we have to explain, how the chain-length dependency has been realized within the MC method. Assume that at a certain stage for a given chain  $ P_{s} $ a partner chain for the
+
+ $$ \overline{{g}}(r,t)=\overline{{F}}_{2}(r,t)r, $$ 

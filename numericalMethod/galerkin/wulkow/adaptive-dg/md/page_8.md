@@ -1,0 +1,13 @@
+Changing the order of summations then leads to
+
+ $$ \sum_{k=0}^{\infty}a_{k}^{\prime}(t)(l_{j},l_{k})=\Psi(s)\sum_{k=0}^{\infty}a_{k}(t)(l_{j},A l_{k})\quad. $$ 
+
+So the above rather lengthy expression simplifies drastically: by application of the orthogonality relation (3.4) only one term remains on the left side, thus yielding an infinite system of ordinary differential equations for the sequence of expansion coefficients  $ a_{j}(t), j = 0, 1, \ldots $
+
+ $$ \gamma_{j}a_{j}^{\prime}(t)=\Psi(s)\sum_{k=0}^{\infty}a_{k}(t)(l_{j},A l_{k})\quad. $$ 
+
+In the Galerkin method this infinite system is replaced by the appropriate finite system thus defining the coefficients  $ a_j^{(n)}, j = 0, 1, \ldots, n $. As for the choice of the truncation index  $ n $, the truncation error is estimated so that at least the order of magnitude of the error is known, once a decision for a specific  $ n $ has been made. In emergency cases, the computation can be just repeated with higher truncation index. Typical values in applications are in the range 5 - 10. The remaining task is to compute the  $ O(n^2) $ terms ( $ l_j, Al_k $) either analytically or, in complicated mechanisms, numerically by means of an adaptive multigrid summation or a Gauss–Christoffel summation formula based on the weight function  $ \Psi $. For a number of interesting mechanisms analytic formulae are known and can be exploited.
+
+For the special case of the Schulz–Flory weight function this sometimes rather lengthy preprocessing can be automated. This is done in the software package MACRON [1]. The package MACRON combines the discrete Galerkin techniques with the formerly developed software package LARKIN due to [12, 2] for the treatment of standard though large scale chemical reaction systems. Only the chemical formalism is needed as input to start the simulation. It includes sophisticated stiff ODE solvers of extrapolation type [11], pointwise evaluation of the Galerkin approximation by a fast summation algorithm, appropriate internal scaling and monitoring by truncation error norms. In order to document the efficiency of the algorithm, a comparative run of the large scale stiff integration of the original ODE system and the small scale ODE system for the Galerkin coefficients is given in Table 1. The underlying chemical problem is a “quasi-living” free radical polymerization problem of technical interest — see [15]. The authors of [15] applied a modern sparse version of Gear’s method. The discrete Galerkin method was used within the package MACRON.
+
+Upon ignoring the fact that the direct stiff integration did not give a comparable accuracy for the desired dispersity, the speed-up factor can be estimated. To do this, the CPU-time of about 16.000 sec with maximum

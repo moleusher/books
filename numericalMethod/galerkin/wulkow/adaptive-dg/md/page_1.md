@@ -1,0 +1,3 @@
+# Adaptive Discrete Galerkin–Methods for Macromolecular Processes  $ \ast\ast $
+
+Abstract. In this paper, a rather recent algorithmic approach to the numerical simulation of macromolecular processes is surveyed. It avoids the numerical stiff integration of thousands up to millions of ODE's by constructing a scale of discrete Hilbert spaces, especially weighted sequence spaces, and establishing a corresponding Galerkin method. Examples including polyreactions of industrial relevance and ecological waste management by biochemical recycling illustrate the importance and efficiency of the algorithm.

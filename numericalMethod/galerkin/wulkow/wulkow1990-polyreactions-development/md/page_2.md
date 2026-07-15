@@ -1,0 +1,5 @@
+# Numerical Simulation of Macromolecular Kinetics – Recent Developments
+
+## Abstract
+
+The mathematical modeling of macromolecular reactions leads to countable (possibly infinite) systems of ordinary differential equations (CODE's). This paper reviews two recent developments of the so-called discrete Galerkin method, which has been developed for the numerical treatment of countable systems, which arise e.g. in polymer chemistry. The first approach can be considered as a method of lines with moving basis functions and has been implemented recently in the program package MACRON. The second type of the Galerkin method is characterized by a so-called outer time discretization of the complete problem and an appropriate and efficient solution of the arising subproblems. This method is realized in the research code CODEX.

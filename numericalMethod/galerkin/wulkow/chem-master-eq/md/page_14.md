@@ -1,0 +1,15 @@
+Localization and the Galerkin h-p-method in 1d. In practice the global approach outlined above has proven to be too restrictive, in particular when dealing with multi-modal distributions. The herein reviewed Galerkin h-p-method therefore abandons the global approximation strategy—rather, it is based on a localization principle by decomposing the state space into intervals. Furthermore, it chooses the weight function to be the constant function  $ \psi \equiv 1 $. The Hilbert space corresponding to  $ \psi \equiv 1 $ is  $ \mathcal{H}_{\psi} = l^2 $. Square summable distributions  $ p(t) \in l^2 $ do in general not possess bounded statistical moments, which is a desirable property. In order to guarantee bounded statistical moments, we consider the family of Hilbert spaces  $ \mathcal{H}_{\psi}(\cdot, \rho) $ with weight function  $ \psi(x, \rho) = (1 - \rho) \rho^x $ for  $ x \in \mathbb{N} $. It can be shown that the infinitesimal generators corresponding to the CME are typically discrete shift operators that have unique solutions within this family of Hilbert spaces. Basically such operators are Lipschitz-continuous within the scale, but not within one fixed  $ \mathcal{H}_{\psi(\cdot, \rho)} $. Now, if we require  $ p(0) \in \mathcal{H}_{\psi(\cdot, \rho)} $, we can ensure that  $ p(t) $ has bounded statistical moments for  $ t > 0 $.
+
+Consider a partition of the state space N given by
+
+ $$ \begin{array}{r l}{\textbf{N}=}&{{}\left[L^{(1)},U^{(1)}\right]\cup\cdots\cup\left[L^{(M)},U^{(M)}\right]\cup\left[L^{(M+1)},\infty\right)}\end{array} $$ 
+
+with finite discrete intervals  $ I^{(m)} = [L^{(m)}, U^{(m)}] = \{L^{(m)}, L^{(m)} + 1, \ldots, U^{(m)}\} $ and the semi-infinite interval  $ I_{\infty} = [L_{M+1}, \infty) = \{L_{M+1}, \ldots\} $. We assume that  $ L^{(i)} \leq U^{(i)} < L^{(j)} \leq U^{(j)} $ for  $ i < j $, and set  $ L^{(0)} = 0 $ and  $ L^{(m+1)} = U^{(m)} + 1 $. In the sequel, we will describe how to approximate  $ p(t) $ locally on each interval  $ I^{(m)} $. Define  $ p_r^{(m)}(t) $ to be the Galerkin approximation of order  $ r $ to  $ p(t) $ on  $ I^{(m)} $. In general,  $ r $ will depend on the interval  $ I^{(m)} $.
+
+We first consider the semi-infinite interval  $ I^{(\infty)} $. Choosing  $ p_{0}^{(\infty)}(t) \equiv 0 $, the resulting approximation error on  $ I^{(\infty)} $ is
+
+ $$ \begin{array}{r c l}{\displaystyle|p(t)-p_{0}^{(\infty)}(t)|_{I^{(\infty)}}}&{=}&{\displaystyle\sum_{x\in I^{(\infty)}}|p(t,x)|^{2}.}\\ \end{array} $$ 
+
+By assumption, the distribution  $ p(t) $ possesses bounded zero, first and second statistical moments  $ \mu_0 $,  $ \mu_1 $ and  $ \mu_2 $, respectively. Consequently, the above approximation error will get arbitrarily small, if  $ x_{max} = L^{(M+1)} - 1 $ is chosen large enough. It has been shown in [35] that
+
+ $$ x_{max}=\frac{\mu_{1}}{\mu_{0}}+\kappa\cdot\sqrt{\frac{\mu_{2}}{\mu_{0}}-\left(\frac{\mu_{1}}{\mu_{0}}\right)^{2}} $$ 

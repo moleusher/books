@@ -1,0 +1,3 @@
+## Conclusion
+
+The paper presented the basic approximation scheme of the discrete Galerkin method in terms of selected model problems. The theoretical properties of this scheme together with the illustrative numerical experiments back the expectation that the method will also be efficient for more general problems, when further non-polymer species or a mixture of different polymer species arise. Of course, a lot of further work needs to be done in view of extended problem classes. However, the authors regard this paper as a first step towards an efficient, reliable and storage economic simulation of polyreaction kinetics.

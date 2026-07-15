@@ -1,0 +1,13 @@
+The system includes the following reactions:
+
+ $$ \left.\begin{array}{r c c c c c}{R_{1}:}&{\star}&{\longrightarrow}&{A,}&{\alpha_{1}(x)}&{=}&{c_{1}/(c_{2}+x_{2}^{\beta})}\\ {R_{2}:}&{A}&{\longrightarrow}&{\star,}&{\alpha_{2}(x)}&{=}&{c_{3}x_{1}}\\ {R_{3}:}&{\star}&{\longrightarrow}&{B,}&{\alpha_{3}(x)}&{=}&{c_{4}/(c_{5}+x_{1}^{\gamma})}\\ {R_{4}:}&{B}&{\longrightarrow}&{\star,}&{\alpha_{4}(x)}&{=}&{c_{6}x_{2}}\\ \end{array}\right\} $$ 
+
+The positive constants  $ c_1 $,  $ c_2 $ and  $ c_3 $,  $ c_4 $ determine the maximal rate of synthesis of the repressors A and B, respectively. The degradation rates of the repressors are denoted by  $ c_5 $ and  $ c_6 $, while coefficients  $ \beta > 1 $ and  $ \gamma > 1 $ specify the cooperativity of the two promoters. With subscripts i and j indicating the molecule numbers of the two species, these reactions may be written as follows:
+
+ $$ \begin{aligned}&R_{1}:\quad(A_{i},B_{j})\quad\xrightarrow{\frac{c_{1}}{c_{2}+x_{2}^{\beta}}}\quad(A_{i+1},B_{j})\\&R_{2}:\quad(A_{i},B_{j})\quad\xrightarrow{c_{3}x_{1}}\quad(A_{i-1},B_{j})\\&R_{3}:\quad(A_{i},B_{j})\quad\xrightarrow{\frac{c_{4}}{c_{5}+x_{1}^{\gamma}}}\quad(A_{i},B_{j+1})\\&R_{4}:\quad(A_{i},B_{j})\quad\xrightarrow{c_{6}x_{2}}\quad(A_{i},B_{j-1})\\ \end{aligned} $$ 
+
+The reaction  $ R_1 $ is constructed in such a way that the corresponding propensity  $ \alpha_1(x) $ is small whenever  $ x_2 $ is large. Hence, the transcription of  $ A $ is inhibited if many copies of  $ B $ are present. Conversely, a large copy number of  $ A $ inhibits the production of new  $ B $ since  $ x_1 \gg 1 $ implies  $ \alpha_3(x) \ll 1 $. These two scenarios (large number of  $ A $ and small number of  $ B $, or large number of  $ B $ and small number of  $ A $) correspond to the two stable steady states of the traditional reaction rate equations
+
+ $$ \begin{array}{rcl}\dot{y}_{1}&=&\frac{c_{1}}{c_{2}+y_{2}^{\beta}}-c_{3}y_{1}\\\dot{y}_{2}&=&\frac{c_{4}}{c_{5}+y_{1}^{\gamma}}-c_{6}y_{2}\end{array} $$ 
+
+(cf. [15]). The solution of (3.27), however, does not provide an appropriate description since a single trajectory can only converge to one of the steady states, whereas in the real biological system flipping between stable states due to chemical or thermal induction is possible (cf. [15]). This switching behavior can only be reproduced by a stochastic description including fluctuations which can induce transitions from one steady state to the other one.

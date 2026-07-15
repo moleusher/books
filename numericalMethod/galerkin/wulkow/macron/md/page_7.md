@@ -1,0 +1,13 @@
+One extension of (1.2) is the modified weight function [13]:
+
+ $$ \Psi_{\rho,\alpha}(s)=\left(1-\rho\right)^{1+\alpha}\rho^{s-1}\left(\begin{matrix}{s-1+\alpha}\\ {s-1}\\ \end{matrix}\right), $$ 
+
+with an additional parameter  $ \alpha > -1 $. Approximations based on this weight function have some nice features. Depending on  $ \rho $ and  $ \alpha $, a Poisson distribution can be efficiently represented as well as hyperbolas and Schulz-Flory distributions multiplied by arbitrary polynomials. In the present first version of MACRON the capacity of this amelioration has not been used, because the analytical properties of the associated polynomials are more difficult to implement. However, an extended moving weight function concept can be derived and will be used to improve the error estimation (see below). Besides, it is possible to transform a given representation (1.1) to an expansion associated with (1.3) after a simulation.
+
+Analytical preprocessing. For complete reaction systems, many properties of the discrete Laguerre polynomials have to be employed to derive differential equations for the respective expansion coefficients. This sometimes lengthy procedure is called analytical preprocessing. The preprocessing can be done step-by-step and is well suited to be implemented in a program. In MACRON a lot of basic kinetic steps are prepared. Especially the treatment of systems with some macromolecular species becomes much easier, because all transformations between the several polynomial systems are automatically performed.
+
+Error estimation. It has been shown in [8] and [13], that the error of approximation (1.1) can be estimated well. The resulting estimate gives valuable hints to discuss obtained results (see Section 2.2).
+
+In MACRON an additional device (called α-check) has been installed to increase the reliability of the method. Optimal parameters  $ \bar{\rho} $ and  $ \bar{\alpha} $ for the weight function (1.3) are computed. By comparison of the parameter  $ \rho $ adaptively chosen for (1.2) and the parameters  $ \bar{\rho} $ and  $ \bar{\alpha} $, useful hints can be obtained to estimate the quality of an approximation. Tests showed, that with the standard parameter adaptation for (1.2) from [8], distributions of the extended weight function type up to  $ \alpha = 5 - 10 $ can be efficiently (i.e. with less than 10–20 expansion coefficients) approximated. Whenever for a given CLD the two-parameter adaptation leads to a > 10, a warning message will be generated.
+
+Numerical Devices. The computational part of MACRON includes (among others)

@@ -1,0 +1,5 @@
+growth are characterized by:
+
+ $$ \begin{array}{ccccccc} C_{3}H_{3} & + & C_{3}H_{3} & \longrightarrow &  P_{1} \\ P_{s} & + & H & \longleftrightarrow &  A_{s} & + & H_{2} \\ A_{s} & + & C_{2}H_{2} & \longleftrightarrow &  B_{s} \\ B_{s} & + & C_{2}H_{2} & \longrightarrow &  P_{s+1} & + & H \\ P_{s} & + & P_{t} & \longrightarrow &  P_{s+t} \end{array} $$ 
+
+with $s,t = 1,2,\ldots$. The program MACRON enables a further automatic processing of this reaction system (including the large number of standard chemical reactions) and is used to study the soot formation in flat isothermal flames. The results are in satisfactory agreement [17] with the experimental data of Böhm et al. [3]. Studies of a constant pressure flat flame are in progress and different processes of soot formation can be easily modeled, e.g. oxidation of soot.

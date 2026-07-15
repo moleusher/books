@@ -1,0 +1,15 @@
+The thus characterized approximation has the structure of the method of lines approach in the treatment of PDE's: first, the space discretization is performed, which leads to a system of ODE's of fixed dimension. These differential equations are typically stiff, too, and need to be solved by an efficient stiff integrator. The hopeful benefit of this approach, however, can be that the newly arising stiff system has drastically smaller dimension than the original one. In order to achieve this goal, at least intuitively, the Galerkin method suggested by Deuflhard and Wulkow involves two further features, which are crucial for the success of the method. First, the weight function  $ \Psi $, which will depend on at least one parameter, is normalized such that its zero and first order statistical moments  $ \nu_{0}, \nu_{1} $ coincide with the corresponding moments  $ \mu_{0}, \mu_{1} $ of the unknown distribution u (up to some common scaling factor). As a consequence, the weight function  $ \Psi $ is then time dependent just as the wanted distribution u — which motivates the name moving weight function in view of the term moving grid within the method of lines for PDE's. (There also exists the analogue of static regridding, to adapt the free parameters.) Second, in order to monitor the truncation index n, the truncation error is estimated. The principle of the truncation error estimator is the same, which is used to monitor the discretization error of an ODE integrator: one just estimates the first neglected term in the expansion. For details the reader may refer to the paper [13]. For the purpose of the present survey, the thus designed adaptive discrete Galerkin procedure will now just be illustrated. For this reason, let us specify the weight function to be the geometric weight function, also called Schulz–Flory distribution in the chemical literature. If we normalize it as described above, it arises as
+
+ $$ \Psi_{\rho}(s)=(1-\rho)\rho^{s-1}\quad,\quad0<\rho<1 $$ 
+
+so that
+
+ $$ \nu_{\theta}=\sum_{s=1}^{\infty}\Psi_{\rho}(s)=1\qquad\mathrm{a n d}\qquad\nu_{1}=\sum_{s=1}^{\infty}s\Psi_{\rho}(s)=(1-\rho)^{-1}=\frac{\mu_{1}}{\mu_{0}} $$ 
+
+in terms of the parameter  $ \rho $. The associated orthogonal polynomials are the discrete Laguerre polynomials
+
+ $$ l_{k}(s)=\rho^{k}\sum_{\nu=0}^{k}\binom{k}{\nu}\left(\frac{\rho-1}{\rho}\right)^{\nu}\binom{s-1}{\nu}. $$ 
+
+Of course, the above representation is not used for actual computation. Rather, the three term recurrence is exploited. By inserting expansion (3.5) into (3.1), multiplying with the test function  $ l_{j}(s) $ and summing over the discrete variable s we obtain
+
+ $$ \sum_{s=1}^{\infty}\Psi(s)\sum_{k=0}^{\infty}a_{k}^{\prime}(t)l_{j}(s)l_{k}(s)=\sum_{s=1}^{\infty}\Psi(s)\sum_{k=0}^{\infty}a_{k}(t)l_{j}(s)(A l_{k}(s))\quad. $$ 

@@ -1,0 +1,11 @@
+The discrete Galerkin method allows the numerical solution of complete macromolecular reaction systems (see e.g. [2] MMA polymerization, and [14] degradation of dextrane).
+
+However, the realization of the method requires a good knowledge of analytical and numerical details, which cannot be expected from any user (in specific fields of application). On the other hand, the software standard of the used programs was only on the level of research codes up to now.
+
+The program package MACRON (MACROmolecular reaction kiNetics) presented in this paper is a first step towards a user-friendly implementation. This package combines the discrete Galerkin techniques for the simulation of macromolecular reactions with the software environment of LARKIN. In particular, the chemical compiler of LARKIN has been extended. Now, the reaction equations, standard kinetics as well as macromolecular reaction steps, can be entered by the user in a familiar form. Then the necessary preparations of the Galerkin method (called analytical preprocessing) are performed. For this purpose a list of typical macromolecular reaction steps (e.g. chain addition, transfer reactions, termination processes) has been implemented and will be continued. The size of a chemical system is restricted by the available computer memory.
+
+The numerical devices of MACRON (time-integration, error estimation) are chosen to give a most reliable standard.
+
+The scope of this first version of MACRON are chemical reactions, which are in some sense connected with the Schulz-Flory distribution. Limitations of the present approach are discussed in Section 2.2. The package will serve as a basis of further developments, in particular in view of ideas, which are realized in the algorithm CODEX [13].
+
+Most of the algorithmic details of the implementation are described elsewhere (see [8], [2], [13]), thus in Section 1 only a brief summary of the basic concepts and the new ingredients of MACRON is given. Section 2 explains in short form the usage of MACRON – including possible difficulties and limitations. To illustrate the efficiency of the code, Section 3 covers a recent example from polymer chemistry. The Appendix includes a detailed input description of MACRON and a list of the macromolecular reaction types implemented at the moment.

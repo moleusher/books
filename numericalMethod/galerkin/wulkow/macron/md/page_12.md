@@ -1,0 +1,13 @@
+leads to (2.2). Both reactions seem senseless to a chemist, but are necessary to overcome the lack of reaction constant  $ k_{i} $ in [2] by a QSSA assumption. Such artificial reactions are seldom, but appear necessarily in case of simplifications of a model.
+
+The next input block, *GALERKIN PROJECTION, determines the number of polynomials used for the Galerkin approximation of each macromolecular species. In this case, five polynomials are sufficient to get a projection error less than  $ 7 \cdot 10^{-3} $. More information concerning this point can be found in Section 2.2.
+
+Initial values for the species concentrations M, I, S are given in the input block *INITIAL CONCENTRATIONS. The process time and the accuracy of the numerical integration of the resulting systems of ODE's are regulated in *ACCURACY and *INTEGRATION BOUNDS, respectively. By *PRINT PARAMETER additional information given on separated files can be requested. Finally *DISTRIBUTION OUTPUT determines the range of indices and the increment for the output of distributions.
+
+Note that this is only one specific example of a (short) input. Several possibilities of MACRON are not demonstrated here. We therefore refer to another example treated in Section 3 and to the Appendix.
+
+### 2.2 SIMULATION
+
+First steps with a new reaction system. When the user begins the work with a complete new reaction system, we recommend to use the minimum allowed number of two expansion coefficients, NPROJ=2, for each macromolecular species first. NPROJ determines the quality and accuracy of the Galerkin approximation, but will not be chosen adaptively by MACRON. A choice of NPROJ=2 will lead to correct results for the first statistical moments of each chain length distribution. The results of such a simulation — like mean values, polydispersities and concentrations — may be helpful for a first rough adjustment of model parameters. If open reaction steps occur, NPROJ+ 3 expansion coefficients will be used automatically by the program to ensure this. About the attributes closed and open the user will be informed in the macromolecular reaction list in Section 4.3.
+
+In the second step, the resulting CLD’s can be considered. In this version of MACRON all approximations are based on the Schulz-Flory distribution. Obviously, such a distribution can be very well represented with NPROJ=2 expansion coefficients. The more different an actual CLD is from the Schulz-Flory distribution, the higher NPROJ must be. Actually, the approximation of a wide range of CLD’s is possible within technical accuracy  $ (10^{-1}-10^{-2}) $ and NPROJ≤20. The maximum number of coefficients is restricted by NPROJ≤98. We recommend
