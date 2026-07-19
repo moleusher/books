@@ -1,0 +1,32 @@
+{
+  "book": "Integrated Process Modeling, Advanced Control and Data Analytics for Optimizing Polyolefin Manufacturing",
+  "total_pdf_pages": 866,
+  "volumes": {
+    "volume1": {
+      "dir": "volume1",
+      "chapters": [
+        {"file": "Ch01_Introduction.md",    "title": "1. Introduction to Integrated Process Modeling", "pages": [49, 88]},
+        {"file": "Ch02_Property_Methods.md","title": "2. Selection of Property Methods and Estimation of Physical Properties", "pages": [89, 134]},
+        {"file": "Ch03_Reactor_Modeling.md","title": "3. Reactor Modeling, Convergence Tips, and Data-Fit Tool", "pages": [135, 162]},
+        {"file": "Ch04_Free_Radical_LDPE_EVA.md","title": "4. Free Radical Polymerizations: LDPE and EVA", "pages": [163, 210]},
+        {"file": "Ch05_Ziegler_Natta.md",   "title": "5. Ziegler-Natta Polymerization: HDPE, PP, LLDPE, and EPDM", "pages": [211, 314]},
+        {"file": "Ch06_Free_Radical_Ionic_PS_SBS.md","title": "6. Free Radical and Ionic Polymerizations: PS and SBS Rubber", "pages": [315, 368]},
+        {"file": "Ch07_Dynamic_Simulation.md","title": "7. Improved Polymer Process Operability and Control", "pages": [369, 427]}
+      ],
+      "front_matter": {"file": "00_Front_Matter.md", "pages": [1, 48]}
+    },
+    "volume2": {
+      "dir": "volume2",
+      "chapters": [
+        {"file": "Ch08_Model_Predictive_Control.md","title": "8. Model-Predictive Control of Polyolefin Processes", "pages": [471, 566]},
+        {"file": "Ch09_Multivariate_Statistics.md","title": "9. Application of Multivariate Statistics to Optimizing Polyolefin Manufacturing", "pages": [567, 622]},
+        {"file": "Ch10_Machine_Learning.md", "title": "10. Applications of Machine Learning to Optimizing Polyolefin Manufacturing", "pages": [623, 740]},
+        {"file": "Ch11_Hybrid_SGML.md",      "title": "11. A Hybrid Science-Guided Machine Learning Approach", "pages": [741, 788]},
+        {"file": "Appendix_A_Matrix_Algebra.md","title": "Appendix A. Matrix Algebra in Multivariate Data Analysis and MPC", "pages": [789, 826]},
+        {"file": "Appendix_B_Python.md",     "title": "Appendix B. Introduction to Python for Chemical Engineers", "pages": [827, 849]},
+        {"file": "Index.md",                 "title": "Index", "pages": [850, 866]}
+      ],
+      "front_matter": {"file": "00_Front_Matter.md", "pages": [429, 470]}
+    }
+  }
+}
