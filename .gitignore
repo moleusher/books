@@ -13,3 +13,6 @@ env/
 
 # Large parsed outputs (keep scripts + PDFs only)
 */images/
+numericalMethod/IDAES/examples/
+numericalMethod/IDAES/repo/
+numericalMethod/IDAES/examples/

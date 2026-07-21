@@ -1,0 +1,63 @@
+{
+  "expectations": [
+    {
+      "text": "FlowsheetBlock, Flash/Feed/Product, BTXParameterBlock or GenericParameterBlock, get_solver, Arc, TransformationFactory",
+      "passed": true,
+      "evidence": "FlowsheetBlock=True, units=True, props=True, solver=True, arc+expand=True"
+    },
+    {
+      "text": "ConcreteModel + FlowsheetBlock with dynamic=False",
+      "passed": true,
+      "evidence": "ConcreteModel=\u2713, FlowsheetBlock=\u2713, dynamic=False=\u2713"
+    },
+    {
+      "text": "property package BTXParameterBlock or GenericParameterBlock with benzene+toluene",
+      "passed": true,
+      "evidence": "BTX or Generic=\u2713, benzene=\u2713, toluene=\u2713"
+    },
+    {
+      "text": "Feed, Flash (has_heat_transfer, has_pressure_change), Product units",
+      "passed": true,
+      "evidence": "Feed=True, Flash=True, Product=True, HT=True, PC=True"
+    },
+    {
+      "text": "Arcs + TransformationFactory('network.expand_arcs')",
+      "passed": true,
+      "evidence": "Arc=\u2713, expand_arcs=\u2713"
+    },
+    {
+      "text": "flow_mol=1.0, T=350K, P=101325, mole_frac_comp['benzene']=0.5, ['toluene']=0.5",
+      "passed": true,
+      "evidence": "flow_mol=1, T=350, P=101325, mole_frac_comp present"
+    },
+    {
+      "text": "heat_duty=0, deltaP=0",
+      "passed": true,
+      "evidence": "heat_duty=0=\u2713, deltaP=0=\u2713"
+    },
+    {
+      "text": "degrees_of_freedom check before solve",
+      "passed": true,
+      "evidence": "DOF check=\u2713"
+    },
+    {
+      "text": "sequential init with propagate_state",
+      "passed": true,
+      "evidence": "propagate_state=\u2713, initialize=\u2713"
+    },
+    {
+      "text": "get_solver + solver.solve(m)",
+      "passed": true,
+      "evidence": "get_solver=\u2713, solver.solve=\u2713"
+    },
+    {
+      "text": "report() or manual print of vapor/liquid composition and temperature",
+      "passed": true,
+      "evidence": "report=\u2713"
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "total": 11
+  }
+}
