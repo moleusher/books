@@ -1,14 +1,16 @@
 ---
 name: idaes-pse
 description: >
-  IDAES process systems engineering — build flowsheets, configure property packages,
-  add unit models, initialize and solve process simulations. Use this skill whenever
-  the user mentions IDAES, process simulation, flowsheet, chemical process modeling,
-  Pyomo-based optimization, reactor design, distillation, flash calculation, heat
-  exchanger modeling, property packages (NRTL, Peng-Robinson, cubic EoS),
-  thermodynamic configuration, or any kind of chemical engineering simulation task.
-  Even if the user doesn't say "IDAES" explicitly, if they ask about building a
-  process model with unit operations, this is the skill to use.
+  Use for IDAES process modeling — the Python/Pyomo framework for chemical process
+  simulation. Always trigger when the user mentions IDAES or idaes (in any language),
+  regardless of what they're asking. Also trigger when someone asks to build, simulate,
+  or optimize a chemical process flowsheet in Python, even without naming IDAES.
+  Covers: flowsheet construction, thermodynamic property packages (NRTL, Peng-Robinson,
+  cubic EoS), unit operations (flash, CSTR, PFR, heat exchanger, distillation, reactor),
+  tear stream initialization for recycle loops, convergence debugging, and process
+  optimization. Keywords: 模拟, 流程, 化工, 闪蒸, 精馏, 反应器, 换热器, 物性,
+  flowsheet, unit model, property package, state_block. Do NOT trigger for: Aspen Plus,
+  gPROMS, OpenFOAM, CoolProp, or non-chemical Pyomo optimization (supply chain, LP).
 ---
 
 # IDAES Process Modeling
