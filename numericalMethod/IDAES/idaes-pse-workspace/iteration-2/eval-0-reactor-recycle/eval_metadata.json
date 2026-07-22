@@ -1,0 +1,16 @@
+{
+  "eval_id": 0,
+  "eval_name": "reactor-recycle",
+  "prompt": "使用 IDAES 构建 HDA (hydrodealkylation) 反应器+循环系统：甲苯 + 氢气 → 苯 + 甲烷。进料：甲苯 0.3 mol/s + 氢气 0.3 mol/s，350K, 5 atm。反应器绝热，转化率 75%。反应器出口进入闪蒸罐（325K, 绝热），气相部分回流（20% purge），与新鲜进料混合。构建完整 flowsheet 并求解。",
+  "assertions": [
+    {"id": "correct-property", "description": "Uses GenericParameterBlock or BTX/HDA property package with benzene+toluene+hydrogen+methane", "check": "code_contains"},
+    {"id": "all-unit-models", "description": "Has Feed(x2), Mixer, Heater, StoichiometricReactor, Flash, Splitter, Compressor, Product units", "check": "code_contains"},
+    {"id": "recycle-loop", "description": "Has recycle loop: Flash→Splitter→Compressor→Mixer", "check": "code_contains"},
+    {"id": "tear-initialization", "description": "Uses tear stream initialization (SequentialDecomposition or manual propagate)", "check": "code_contains"},
+    {"id": "dof-zero", "description": "Checks degrees_of_freedom == 0 before solving", "check": "code_contains"},
+    {"id": "feed-specs", "description": "Fixes feed: 0.3 mol/s toluene, 0.3 mol/s H2, 350K, 5 atm", "check": "code_contains"},
+    {"id": "reactor-specs", "description": "StoichiometricReactor with conversion=0.75, heat_duty=0", "check": "code_contains"},
+    {"id": "solve", "description": "Calls get_solver + solver.solve(m)", "check": "code_contains"},
+    {"id": "report", "description": "Reports results with stream table or report()", "check": "code_contains"}
+  ]
+}

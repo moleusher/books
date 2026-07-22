@@ -1,0 +1,11 @@
+{
+  "skill_name": "idaes-pse",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "使用 IDAES 构建一个简单的 flash 模拟：苯-甲苯混合物 (50/50 mol%), 进料 1 mol/s, 350 K, 1 atm。flash 绝热等压操作。求解并报告气液相组成和温度。",
+      "expected_output": "完整的 IDAES Python 代码，包含：1) 正确的导入 2) FlowsheetBlock 3) BTXParameterBlock 或 GenericParameterBlock 配置 4) Feed + Flash + Product 单元模型 5) Arc 连接 6) 正确的 DOF 设置 7) 初始化和求解 8) 结果报告",
+      "files": []
+    }
+  ]
+}

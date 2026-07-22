@@ -1,0 +1,5 @@
+Completing all of the challenges would take close to two years and might not be feasible for the immediate future. I suggest that you pick only one challenge to work on in the next month or two. Base your decision on which method you would to turn into a habit. If your obstacles are in understanding concepts, you might want to practice metaphor. If you can’t handle the volume of dates and definitions, linking or pegging might be a better method to master.
+
+The holistic learning theory should help you pinpoint where you might want to improve. From that point, you can determine which techniques would improve on that weak point. By finally moving that technique from a tool, which requires effort to use, to a habit which happens automatically, you can improve the way you learn information.
+
+Included with this e-book are several documents for practicing some of the techniques mentioned in the book. You can use these documents to help you get started with your practicing sessions.

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eval Set Review - idaes-pse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lora', Georgia, serif; background: #faf9f5; padding: 2rem; color: #141413; }
+    h1 { font-family: 'Poppins', sans-serif; margin-bottom: 0.5rem; font-size: 1.5rem; }
+    .description { color: #b0aea5; margin-bottom: 1.5rem; font-style: italic; max-width: 900px; }
+    .controls { margin-bottom: 1rem; display: flex; gap: 0.5rem; }
+    .btn { font-family: 'Poppins', sans-serif; padding: 0.5rem 1rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.875rem; font-weight: 500; }
+    .btn-add { background: #6a9bcc; color: white; }
+    .btn-add:hover { background: #5889b8; }
+    .btn-export { background: #d97757; color: white; }
+    .btn-export:hover { background: #c4613f; }
+    table { width: 100%; max-width: 1100px; border-collapse: collapse; background: white; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    th { font-family: 'Poppins', sans-serif; background: #141413; color: #faf9f5; padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem; }
+    td { padding: 0.75rem 1rem; border-bottom: 1px solid #e8e6dc; vertical-align: top; }
+    tr:nth-child(even) td { background: #faf9f5; }
+    tr:hover td { background: #f3f1ea; }
+    .section-header td { background: #e8e6dc; font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 0.8rem; color: #141413; text-transform: uppercase; letter-spacing: 0.05em; }
+    .query-input { width: 100%; padding: 0.4rem; border: 1px solid #e8e6dc; border-radius: 4px; font-size: 0.875rem; font-family: 'Lora', Georgia, serif; resize: vertical; min-height: 60px; }
+    .query-input:focus { outline: none; border-color: #d97757; box-shadow: 0 0 0 2px rgba(217,119,87,0.15); }
+    .toggle { position: relative; display: inline-block; width: 44px; height: 24px; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle .slider { position: absolute; inset: 0; background: #b0aea5; border-radius: 24px; cursor: pointer; transition: 0.2s; }
+    .toggle .slider::before { content: ""; position: absolute; width: 18px; height: 18px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: 0.2s; }
+    .toggle input:checked + .slider { background: #d97757; }
+    .toggle input:checked + .slider::before { transform: translateX(20px); }
+    .btn-delete { background: #c44; color: white; padding: 0.3rem 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-size: 0.75rem; font-family: 'Poppins', sans-serif; }
+    .btn-delete:hover { background: #a33; }
+    .summary { margin-top: 1rem; color: #b0aea5; font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <h1>Eval Set Review: <span id="skill-name">idaes-pse</span></h1>
+  <p class="description">Current description: <span id="skill-desc">IDAES process systems engineering — build flowsheets, configure property packages, add unit models, initialize and solve process simulations.</span></p>
+
+  <div class="controls">
+    <button class="btn btn-add" onclick="addRow()">+ Add Query</button>
+    <button class="btn btn-export" onclick="exportEvalSet()">Export Eval Set</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:65%">Query</th>
+        <th style="width:18%">Should Trigger</th>
+        <th style="width:10%">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="eval-body"></tbody>
+  </table>
+
+  <p class="summary" id="summary"></p>
+
+  <script>
+    const EVAL_DATA = [{"query": "\u6211\u60f3\u7528 IDAES \u6a21\u62df\u4e00\u4e2a\u95ea\u84b8\u7f50\uff0c\u8fdb\u6599\u662f\u82ef\u548c\u7532\u82ef\u6df7\u5408\u7269\uff0c\u6e29\u5ea6350K\uff0c\u5e2e\u6211\u5199\u4ee3\u7801", "should_trigger": true}, {"query": "build an IDAES flowsheet for methanol synthesis from syngas with recycle loop and heat integration", "should_trigger": true}, {"query": "\u7528 Pyomo \u548c IDAES \u642d\u4e00\u4e2a\u7cbe\u998f\u5854\u6a21\u578b\uff0c\u9700\u8981 NRTL \u7269\u6027\u5305\uff0c\u7ec4\u4efd\u662f\u4e59\u9187\u548c\u6c34", "should_trigger": true}, {"query": "my idaes process simulation is not converging \u2014 the solver keeps saying 'restoration failed' after initialization, how do I debug this?", "should_trigger": true}, {"query": "need to configure a Peng-Robinson property package in IDAES for a CO2 capture process with MEA solvent at high pressure", "should_trigger": true}, {"query": "how do I add a CSTR reactor to my idaes flowsheet? it needs heat transfer and a reaction package for the esterification kinetics", "should_trigger": true}, {"query": "i have an idaes flowsheet with a recycle stream (from flash vapor back to a mixer) \u2014 how do I set up the tear stream and initialize it step by step?", "should_trigger": true}, {"query": "\u6211\u60f3\u5728 IDAES \u91cc\u8bbe\u8ba1\u4e00\u4e2a\u6362\u70ed\u7f51\u7edc\uff0c\u7528 Heater \u548c HeatExchanger \u6a21\u578b\uff0c\u7269\u6027\u662f water \u548c steam", "should_trigger": true}, {"query": "\u5e2e\u6211\u628a\u8fd9\u4e2a\u5316\u5de5\u6d41\u7a0b\u56fe\u8f6c\u6210 IDAES \u6a21\u578b\uff1a\u8fdb\u6599\u9884\u70ed\u2192\u53cd\u5e94\u5668\u2192\u95ea\u84b8\u2192\u7cbe\u998f\uff0c\u4ea7\u7269\u56de\u6d41", "should_trigger": true}, {"query": "could you help me set up an air separation unit in IDAES? I need nitrogen, argon and oxygen with cubic EoS and binary interaction parameters", "should_trigger": true}, {"query": "\u5728 IDAES \u91cc\u8c03\u8bd5\u6a21\u578b\uff0c\u521d\u59cb\u5316\u65f6\u62a5 InitializationError\uff0c\u600e\u4e48\u89e3\u51b3\uff1f\u5df2\u7ecf\u8bbe\u4e86 scaling \u4f46\u8fd8\u662f\u4e0d\u6536\u655b", "should_trigger": true}, {"query": "\u7528 Python \u7684 scipy.optimize \u505a\u975e\u7ebf\u6027\u89c4\u5212\uff0c\u6c42\u89e3\u4e00\u4e2a\u5316\u5de5\u53cd\u5e94\u5668\u7684\u53c2\u6570\u4f30\u8ba1\u95ee\u9898\uff0c\u4e0d\u9700\u8981 IDAES", "should_trigger": false}, {"query": "how do I install the latest version of Pyomo? i'm getting error with 'pip install pyomo'", "should_trigger": false}, {"query": "write me a script to plot the vapor-liquid equilibrium curve for benzene-toluene using Antoine equation \u2014 just pure matplotlib, no simulation framework needed", "should_trigger": false}, {"query": "explain the difference between Peng-Robinson and Soave-Redlich-Kwong equations of state conceptually \u2014 i'm studying for a thermo exam, don't need any code or simulation", "should_trigger": false}, {"query": "\u5e2e\u6211\u7528 Pyomo \u4f18\u5316\u4e00\u4e2a\u4f9b\u5e94\u94fe\u6a21\u578b\uff0c\u505a\u7ebf\u6027\u89c4\u5212\uff0c\u6d89\u53ca\u591a\u4e2a\u5de5\u5382\u548c\u4ed3\u5e93\u7684\u8fd0\u8f93\u6210\u672c\u6700\u5c0f\u5316\uff0c\u4e0d\u6d89\u53ca\u5316\u5de5\u8fc7\u7a0b\u6a21\u62df", "should_trigger": false}, {"query": "how do I set up a CFD simulation in OpenFOAM for a stirred tank reactor? i have the geometry and mesh ready", "should_trigger": false}, {"query": "can you help me debug this gPROMS model? the process simulation is failing at initialization with a singular Jacobian", "should_trigger": false}, {"query": "show me how to use CoolProp to calculate the enthalpy of steam at 500K and 10 bar \u2014 just a simple property lookup, no flowsheet needed", "should_trigger": false}, {"query": "\u6211\u60f3\u7528 Aspen Plus \u642d\u5efa\u4e00\u4e2a\u4e59\u70ef\u88c2\u89e3\u7089\u7684\u6a21\u62df\uff0c\u9700\u8981 RadFrac \u6a21\u5757\u548c BK10 \u7269\u6027\u65b9\u6cd5", "should_trigger": false}, {"query": "\u7528 Pyomo \u5199\u4e00\u4e2a\u5316\u5de5\u8fc7\u7a0b\u6a21\u62df\uff0c\u53cd\u5e94\u5668+\u95ea\u84b8\uff0c\u4f46\u7528\u7684\u662f\u81ea\u5b9a\u4e49\u7684 SimplifiedModel\uff0c\u4e0d\u662f IDAES \u6846\u67b6", "should_trigger": false}, {"query": "\u5e2e\u6211\u5199\u4e00\u4e2a Python \u811a\u672c\u505a\u5316\u5de5\u6d41\u7a0b\u6a21\u62df\uff0c\u7528\u7eaf Pyomo \u7684 Block \u548c Var \u624b\u52a8\u642d\uff0c\u4e0d\u8981\u7528 IDAES \u7684\u5355\u5143\u6a21\u578b\u5e93", "should_trigger": false}];
+
+    let evalItems = [...EVAL_DATA];
+
+    function render() {
+      const tbody = document.getElementById('eval-body');
+      tbody.innerHTML = '';
+
+      // Sort: should-trigger first, then should-not-trigger
+      const sorted = evalItems
+        .map((item, origIdx) => ({ ...item, origIdx }))
+        .sort((a, b) => (b.should_trigger ? 1 : 0) - (a.should_trigger ? 1 : 0));
+
+      let lastGroup = null;
+      sorted.forEach(item => {
+        const group = item.should_trigger ? 'trigger' : 'no-trigger';
+        if (group !== lastGroup) {
+          const headerRow = document.createElement('tr');
+          headerRow.className = 'section-header';
+          headerRow.innerHTML = `<td colspan="3">${item.should_trigger ? 'Should Trigger' : 'Should NOT Trigger'}</td>`;
+          tbody.appendChild(headerRow);
+          lastGroup = group;
+        }
+
+        const idx = item.origIdx;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><textarea class="query-input" onchange="updateQuery(${idx}, this.value)">${escapeHtml(item.query)}</textarea></td>
+          <td>
+            <label class="toggle">
+              <input type="checkbox" ${item.should_trigger ? 'checked' : ''} onchange="updateTrigger(${idx}, this.checked)">
+              <span class="slider"></span>
+            </label>
+            <span style="margin-left:8px;font-size:0.8rem;color:#b0aea5">${item.should_trigger ? 'Yes' : 'No'}</span>
+          </td>
+          <td><button class="btn-delete" onclick="deleteRow(${idx})">Delete</button></td>
+        `;
+        tbody.appendChild(tr);
+      });
+      updateSummary();
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function updateQuery(idx, value) { evalItems[idx].query = value; updateSummary(); }
+    function updateTrigger(idx, value) { evalItems[idx].should_trigger = value; render(); }
+    function deleteRow(idx) { evalItems.splice(idx, 1); render(); }
+
+    function addRow() {
+      evalItems.push({ query: '', should_trigger: true });
+      render();
+      const inputs = document.querySelectorAll('.query-input');
+      inputs[inputs.length - 1].focus();
+    }
+
+    function updateSummary() {
+      const trigger = evalItems.filter(i => i.should_trigger).length;
+      const noTrigger = evalItems.filter(i => !i.should_trigger).length;
+      document.getElementById('summary').textContent =
+        `${evalItems.length} queries total: ${trigger} should trigger, ${noTrigger} should not trigger`;
+    }
+
+    function exportEvalSet() {
+      const valid = evalItems.filter(i => i.query.trim() !== '');
+      const data = valid.map(i => ({ query: i.query.trim(), should_trigger: i.should_trigger }));
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'eval_set.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    render();
+  </script>
+</body>
+</html>

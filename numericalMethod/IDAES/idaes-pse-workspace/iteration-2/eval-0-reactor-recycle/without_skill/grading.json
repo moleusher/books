@@ -1,0 +1,53 @@
+{
+  "expectations": [
+    {
+      "text": "GenericParameterBlock or BTX/HDA property package with benzene+toluene+hydrogen+methane",
+      "passed": true,
+      "evidence": "has_4_components=True"
+    },
+    {
+      "text": "Feed(x2), Mixer, Heater, StoichiometricReactor, Flash, Splitter, Compressor, Product",
+      "passed": true,
+      "evidence": "{'Feed': True, 'Mixer': True, 'StoichiometricReactor': True, 'Flash': True, 'Separator': True, 'PressureChanger': True, 'Product': True}"
+    },
+    {
+      "text": "recycle loop: Flash\u2192Splitter\u2192Compressor\u2192Mixer",
+      "passed": true,
+      "evidence": "recycle=\u2713"
+    },
+    {
+      "text": "tear stream initialization (SequentialDecomposition or manual propagate)",
+      "passed": true,
+      "evidence": "has_tear_pattern=\u2713"
+    },
+    {
+      "text": "degrees_of_freedom check",
+      "passed": true,
+      "evidence": "DOF=\u2713"
+    },
+    {
+      "text": "feed: 0.3 mol/s toluene, 0.3 mol/s H2, 350K, 506625 Pa",
+      "passed": true,
+      "evidence": "feed_numbers=\u2713"
+    },
+    {
+      "text": "StoichiometricReactor with conversion=0.75, heat_duty=0",
+      "passed": true,
+      "evidence": "reactor=\u2713"
+    },
+    {
+      "text": "get_solver + solver.solve(m)",
+      "passed": true,
+      "evidence": "solve=\u2713"
+    },
+    {
+      "text": "report results with stream table or report()",
+      "passed": true,
+      "evidence": "report=\u2713"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "total": 9
+  }
+}

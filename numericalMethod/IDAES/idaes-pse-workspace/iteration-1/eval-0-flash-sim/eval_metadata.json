@@ -1,0 +1,62 @@
+{
+  "eval_id": 0,
+  "eval_name": "flash-simulation",
+  "prompt": "使用 IDAES 构建一个简单的 flash 模拟：苯-甲苯混合物 (50/50 mol%), 进料 1 mol/s, 350 K, 1 atm。flash 绝热等压操作。求解并报告气液相组成和温度。",
+  "assertions": [
+    {
+      "id": "correct-imports",
+      "description": "Imports include FlowsheetBlock, Flash/Feed/Product, BTXParameterBlock or GenericParameterBlock, get_solver, Arc, TransformationFactory",
+      "check": "code_contains"
+    },
+    {
+      "id": "flowsheet-creation",
+      "description": "Creates ConcreteModel + FlowsheetBlock with dynamic=False",
+      "check": "code_contains"
+    },
+    {
+      "id": "property-package",
+      "description": "Attaches a property package (BTXParameterBlock or GenericParameterBlock with benzene+toluene config)",
+      "check": "code_contains"
+    },
+    {
+      "id": "unit-models",
+      "description": "Creates Feed, Flash (with has_heat_transfer and has_pressure_change), and Product units",
+      "check": "code_contains"
+    },
+    {
+      "id": "arcs-and-expand",
+      "description": "Connects units with Arcs and calls TransformationFactory('network.expand_arcs')",
+      "check": "code_contains"
+    },
+    {
+      "id": "feed-specs",
+      "description": "Fixes feed flow_mol=1.0, T=350K, P=101325Pa, mole_frac_comp['benzene']=0.5, mole_frac_comp['toluene']=0.5",
+      "check": "code_contains"
+    },
+    {
+      "id": "flash-specs",
+      "description": "Fixes flash heat_duty=0 (adiabatic) and deltaP=0 (isobaric)",
+      "check": "code_contains"
+    },
+    {
+      "id": "dof-zero",
+      "description": "Checks or ensures degrees_of_freedom == 0 before solving",
+      "check": "code_contains"
+    },
+    {
+      "id": "initialization",
+      "description": "Sequentially initializes units (feed→flash) with propagate_state between them",
+      "check": "code_contains"
+    },
+    {
+      "id": "solve",
+      "description": "Calls get_solver + solver.solve(m) to solve the model",
+      "check": "code_contains"
+    },
+    {
+      "id": "report-results",
+      "description": "Reports results using unit.report() or manual print of vapor/liquid composition and temperature",
+      "check": "code_contains"
+    }
+  ]
+}

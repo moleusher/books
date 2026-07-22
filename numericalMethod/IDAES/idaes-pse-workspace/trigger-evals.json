@@ -1,0 +1,25 @@
+[
+  {"query": "我想用 IDAES 模拟一个闪蒸罐，进料是苯和甲苯混合物，温度350K，帮我写代码", "should_trigger": true},
+  {"query": "build an IDAES flowsheet for methanol synthesis from syngas with recycle loop and heat integration", "should_trigger": true},
+  {"query": "用 Pyomo 和 IDAES 搭一个精馏塔模型，需要 NRTL 物性包，组份是乙醇和水", "should_trigger": true},
+  {"query": "my idaes process simulation is not converging — the solver keeps saying 'restoration failed' after initialization, how do I debug this?", "should_trigger": true},
+  {"query": "need to configure a Peng-Robinson property package in IDAES for a CO2 capture process with MEA solvent at high pressure", "should_trigger": true},
+  {"query": "how do I add a CSTR reactor to my idaes flowsheet? it needs heat transfer and a reaction package for the esterification kinetics", "should_trigger": true},
+  {"query": "i have an idaes flowsheet with a recycle stream (from flash vapor back to a mixer) — how do I set up the tear stream and initialize it step by step?", "should_trigger": true},
+  {"query": "我想在 IDAES 里设计一个换热网络，用 Heater 和 HeatExchanger 模型，物性是 water 和 steam", "should_trigger": true},
+  {"query": "帮我把这个化工流程图转成 IDAES 模型：进料预热→反应器→闪蒸→精馏，产物回流", "should_trigger": true},
+  {"query": "could you help me set up an air separation unit in IDAES? I need nitrogen, argon and oxygen with cubic EoS and binary interaction parameters", "should_trigger": true},
+  {"query": "在 IDAES 里调试模型，初始化时报 InitializationError，怎么解决？已经设了 scaling 但还是不收敛", "should_trigger": true},
+
+  {"query": "用 Python 的 scipy.optimize 做非线性规划，求解一个化工反应器的参数估计问题，不需要 IDAES", "should_trigger": false},
+  {"query": "how do I install the latest version of Pyomo? i'm getting error with 'pip install pyomo'", "should_trigger": false},
+  {"query": "write me a script to plot the vapor-liquid equilibrium curve for benzene-toluene using Antoine equation — just pure matplotlib, no simulation framework needed", "should_trigger": false},
+  {"query": "explain the difference between Peng-Robinson and Soave-Redlich-Kwong equations of state conceptually — i'm studying for a thermo exam, don't need any code or simulation", "should_trigger": false},
+  {"query": "帮我用 Pyomo 优化一个供应链模型，做线性规划，涉及多个工厂和仓库的运输成本最小化，不涉及化工过程模拟", "should_trigger": false},
+  {"query": "how do I set up a CFD simulation in OpenFOAM for a stirred tank reactor? i have the geometry and mesh ready", "should_trigger": false},
+  {"query": "can you help me debug this gPROMS model? the process simulation is failing at initialization with a singular Jacobian", "should_trigger": false},
+  {"query": "show me how to use CoolProp to calculate the enthalpy of steam at 500K and 10 bar — just a simple property lookup, no flowsheet needed", "should_trigger": false},
+  {"query": "我想用 Aspen Plus 搭建一个乙烯裂解炉的模拟，需要 RadFrac 模块和 BK10 物性方法", "should_trigger": false},
+  {"query": "用 Pyomo 写一个化工过程模拟，反应器+闪蒸，但用的是自定义的 SimplifiedModel，不是 IDAES 框架", "should_trigger": false},
+  {"query": "帮我写一个 Python 脚本做化工流程模拟，用纯 Pyomo 的 Block 和 Var 手动搭，不要用 IDAES 的单元模型库", "should_trigger": false}
+]

@@ -1,0 +1,41 @@
+{
+  "skill_name": "idaes-pse",
+  "model": "deepseek-v4-pro",
+  "date": "2026-07-21",
+  "configs": {
+    "with_skill": {
+      "pass_rate": "11/11 (100%)",
+      "mean_time_s": 205.6,
+      "mean_tokens": 76052
+    },
+    "without_skill": {
+      "pass_rate": "11/11 (100%)",
+      "mean_time_s": 575.5,
+      "mean_tokens": 103155
+    }
+  },
+  "deltas": {
+    "pass_rate_delta": 0,
+    "time_delta_s": -369.9,
+    "time_delta_pct": "-64%",
+    "token_delta": -27103,
+    "token_delta_pct": "-26%"
+  },
+  "evals": [
+    {
+      "name": "flash-simulation",
+      "with_skill": {
+        "passed": 11,
+        "total": 11,
+        "time_s": 205.6,
+        "tokens": 76052
+      },
+      "without_skill": {
+        "passed": 11,
+        "total": 11,
+        "time_s": 575.5,
+        "tokens": 103155
+      }
+    }
+  ]
+}

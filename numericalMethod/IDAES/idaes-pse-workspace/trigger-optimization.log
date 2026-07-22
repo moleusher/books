@@ -1,0 +1,96 @@
+Split: 14 train, 8 test (holdout=0.4)
+
+============================================================
+Iteration 1/5
+Description: IDAES process systems engineering — build flowsheets, configure property packages, add unit models, initialize and solve process simulations. Use this skill whenever the user mentions IDAES, process simulation, flowsheet, chemical process modeling, Pyomo-based optimization, reactor design, distillation, flash calculation, heat exchanger modeling, property packages (NRTL, Peng-Robinson, cubic EoS), thermodynamic configuration, or any kind of chemical engineering simulation task. Even if the user doesn't say "IDAES" explicitly, if they ask about building a process model with unit operations, this is the skill to use.
+============================================================
+Train: 21/42 correct, precision=100% recall=0% accuracy=50% (88.9s)
+  [FAIL] rate=0/3 expected=True: could you help me set up an air separation unit in IDAES? I 
+  [FAIL] rate=0/3 expected=True: i have an idaes flowsheet with a recycle stream (from flash 
+  [FAIL] rate=0/3 expected=True: how do I add a CSTR reactor to my idaes flowsheet? it needs 
+  [FAIL] rate=0/3 expected=True: need to configure a Peng-Robinson property package in IDAES 
+  [FAIL] rate=0/3 expected=True: 在 IDAES 里调试模型，初始化时报 InitializationError，怎么解决？已经设了 scaling 但还
+  [FAIL] rate=0/3 expected=True: 我想用 IDAES 模拟一个闪蒸罐，进料是苯和甲苯混合物，温度350K，帮我写代码
+  [FAIL] rate=0/3 expected=True: build an IDAES flowsheet for methanol synthesis from syngas 
+  [PASS] rate=0/3 expected=False: how do I set up a CFD simulation in OpenFOAM for a stirred t
+  [PASS] rate=0/3 expected=False: how do I install the latest version of Pyomo? i'm getting er
+  [PASS] rate=0/3 expected=False: show me how to use CoolProp to calculate the enthalpy of ste
+  [PASS] rate=0/3 expected=False: can you help me debug this gPROMS model? the process simulat
+  [PASS] rate=0/3 expected=False: 用 Python 的 scipy.optimize 做非线性规划，求解一个化工反应器的参数估计问题，不需要 IDAES
+  [PASS] rate=0/3 expected=False: 用 Pyomo 写一个化工过程模拟，反应器+闪蒸，但用的是自定义的 SimplifiedModel，不是 IDAES 框
+  [PASS] rate=0/3 expected=False: 我想用 Aspen Plus 搭建一个乙烯裂解炉的模拟，需要 RadFrac 模块和 BK10 物性方法
+Test : 12/24 correct, precision=100% recall=0% accuracy=50% (0.0s)
+  [FAIL] rate=0/3 expected=True: 我想在 IDAES 里设计一个换热网络，用 Heater 和 HeatExchanger 模型，物性是 water 和 
+  [FAIL] rate=0/3 expected=True: my idaes process simulation is not converging — the solver k
+  [FAIL] rate=0/3 expected=True: 用 Pyomo 和 IDAES 搭一个精馏塔模型，需要 NRTL 物性包，组份是乙醇和水
+  [PASS] rate=0/3 expected=False: 帮我用 Pyomo 优化一个供应链模型，做线性规划，涉及多个工厂和仓库的运输成本最小化，不涉及化工过程模拟
+  [FAIL] rate=0/3 expected=True: 帮我把这个化工流程图转成 IDAES 模型：进料预热→反应器→闪蒸→精馏，产物回流
+  [PASS] rate=0/3 expected=False: 帮我写一个 Python 脚本做化工流程模拟，用纯 Pyomo 的 Block 和 Var 手动搭，不要用 IDAES 
+  [PASS] rate=0/3 expected=False: write me a script to plot the vapor-liquid equilibrium curve
+  [PASS] rate=0/3 expected=False: explain the difference between Peng-Robinson and Soave-Redli
+
+Improving description...
+Proposed (44.1s): Use this skill when the user asks about IDAES — the Python/Pyomo framework for chemical process flowsheet simulation. Covers building flowsheets, configuring thermodynamic property packages, adding unit operations (flash, CSTR, PFR, heat exchanger, distillation), initializing models with recycle/tear streams, debugging convergence failures, and process optimization. Also use for chemical process simulation questions in Python that would naturally use IDAES even if the framework isn't named yet.
+
+============================================================
+Iteration 2/5
+Description: Use this skill when the user asks about IDAES — the Python/Pyomo framework for chemical process flowsheet simulation. Covers building flowsheets, configuring thermodynamic property packages, adding unit operations (flash, CSTR, PFR, heat exchanger, distillation), initializing models with recycle/tear streams, debugging convergence failures, and process optimization. Also use for chemical process simulation questions in Python that would naturally use IDAES even if the framework isn't named yet.
+============================================================
+Train: 21/42 correct, precision=100% recall=0% accuracy=50% (89.6s)
+  [FAIL] rate=0/3 expected=True: i have an idaes flowsheet with a recycle stream (from flash 
+  [FAIL] rate=0/3 expected=True: need to configure a Peng-Robinson property package in IDAES 
+  [FAIL] rate=0/3 expected=True: how do I add a CSTR reactor to my idaes flowsheet? it needs 
+  [FAIL] rate=0/3 expected=True: could you help me set up an air separation unit in IDAES? I 
+  [FAIL] rate=0/3 expected=True: 我想用 IDAES 模拟一个闪蒸罐，进料是苯和甲苯混合物，温度350K，帮我写代码
+  [FAIL] rate=0/3 expected=True: build an IDAES flowsheet for methanol synthesis from syngas 
+  [FAIL] rate=0/3 expected=True: 在 IDAES 里调试模型，初始化时报 InitializationError，怎么解决？已经设了 scaling 但还
+  [PASS] rate=0/3 expected=False: how do I set up a CFD simulation in OpenFOAM for a stirred t
+  [PASS] rate=0/3 expected=False: how do I install the latest version of Pyomo? i'm getting er
+  [PASS] rate=0/3 expected=False: 用 Python 的 scipy.optimize 做非线性规划，求解一个化工反应器的参数估计问题，不需要 IDAES
+  [PASS] rate=0/3 expected=False: show me how to use CoolProp to calculate the enthalpy of ste
+  [PASS] rate=0/3 expected=False: can you help me debug this gPROMS model? the process simulat
+  [PASS] rate=0/3 expected=False: 用 Pyomo 写一个化工过程模拟，反应器+闪蒸，但用的是自定义的 SimplifiedModel，不是 IDAES 框
+  [PASS] rate=0/3 expected=False: 我想用 Aspen Plus 搭建一个乙烯裂解炉的模拟，需要 RadFrac 模块和 BK10 物性方法
+Test : 12/24 correct, precision=100% recall=0% accuracy=50% (0.0s)
+  [FAIL] rate=0/3 expected=True: 我想在 IDAES 里设计一个换热网络，用 Heater 和 HeatExchanger 模型，物性是 water 和 
+  [FAIL] rate=0/3 expected=True: my idaes process simulation is not converging — the solver k
+  [FAIL] rate=0/3 expected=True: 用 Pyomo 和 IDAES 搭一个精馏塔模型，需要 NRTL 物性包，组份是乙醇和水
+  [FAIL] rate=0/3 expected=True: 帮我把这个化工流程图转成 IDAES 模型：进料预热→反应器→闪蒸→精馏，产物回流
+  [PASS] rate=0/3 expected=False: 帮我用 Pyomo 优化一个供应链模型，做线性规划，涉及多个工厂和仓库的运输成本最小化，不涉及化工过程模拟
+  [PASS] rate=0/3 expected=False: write me a script to plot the vapor-liquid equilibrium curve
+  [PASS] rate=0/3 expected=False: 帮我写一个 Python 脚本做化工流程模拟，用纯 Pyomo 的 Block 和 Var 手动搭，不要用 IDAES 
+  [PASS] rate=0/3 expected=False: explain the difference between Peng-Robinson and Soave-Redli
+
+Improving description...
+Proposed (44.5s): Use for IDAES process modeling — the Python/Pyomo framework for chemical process simulation. Always trigger when the user mentions IDAES (in any language), regardless of what they're asking. Also trigger when someone asks to build, simulate, or optimize a chemical process flowsheet in Python, even without naming IDAES. Covers: flowsheet construction, thermodynamic property packages (NRTL, Peng-Robinson, cubic EoS), unit operations (flash, CSTR, PFR, heat exchanger, distillation), tear stream initialization, convergence debugging, and solver tuning.
+
+============================================================
+Iteration 3/5
+Description: Use for IDAES process modeling — the Python/Pyomo framework for chemical process simulation. Always trigger when the user mentions IDAES (in any language), regardless of what they're asking. Also trigger when someone asks to build, simulate, or optimize a chemical process flowsheet in Python, even without naming IDAES. Covers: flowsheet construction, thermodynamic property packages (NRTL, Peng-Robinson, cubic EoS), unit operations (flash, CSTR, PFR, heat exchanger, distillation), tear stream initialization, convergence debugging, and solver tuning.
+============================================================
+Train: 21/42 correct, precision=100% recall=0% accuracy=50% (87.9s)
+  [FAIL] rate=0/3 expected=True: need to configure a Peng-Robinson property package in IDAES 
+  [FAIL] rate=0/3 expected=True: i have an idaes flowsheet with a recycle stream (from flash 
+  [FAIL] rate=0/3 expected=True: how do I add a CSTR reactor to my idaes flowsheet? it needs 
+  [FAIL] rate=0/3 expected=True: could you help me set up an air separation unit in IDAES? I 
+  [FAIL] rate=0/3 expected=True: 我想用 IDAES 模拟一个闪蒸罐，进料是苯和甲苯混合物，温度350K，帮我写代码
+  [FAIL] rate=0/3 expected=True: build an IDAES flowsheet for methanol synthesis from syngas 
+  [FAIL] rate=0/3 expected=True: 在 IDAES 里调试模型，初始化时报 InitializationError，怎么解决？已经设了 scaling 但还
+  [PASS] rate=0/3 expected=False: how do I set up a CFD simulation in OpenFOAM for a stirred t
+  [PASS] rate=0/3 expected=False: how do I install the latest version of Pyomo? i'm getting er
+  [PASS] rate=0/3 expected=False: show me how to use CoolProp to calculate the enthalpy of ste
+  [PASS] rate=0/3 expected=False: 用 Python 的 scipy.optimize 做非线性规划，求解一个化工反应器的参数估计问题，不需要 IDAES
+  [PASS] rate=0/3 expected=False: 我想用 Aspen Plus 搭建一个乙烯裂解炉的模拟，需要 RadFrac 模块和 BK10 物性方法
+  [PASS] rate=0/3 expected=False: can you help me debug this gPROMS model? the process simulat
+  [PASS] rate=0/3 expected=False: 用 Pyomo 写一个化工过程模拟，反应器+闪蒸，但用的是自定义的 SimplifiedModel，不是 IDAES 框
+Test : 12/24 correct, precision=100% recall=0% accuracy=50% (0.0s)
+  [FAIL] rate=0/3 expected=True: 我想在 IDAES 里设计一个换热网络，用 Heater 和 HeatExchanger 模型，物性是 water 和 
+  [FAIL] rate=0/3 expected=True: my idaes process simulation is not converging — the solver k
+  [FAIL] rate=0/3 expected=True: 用 Pyomo 和 IDAES 搭一个精馏塔模型，需要 NRTL 物性包，组份是乙醇和水
+  [FAIL] rate=0/3 expected=True: 帮我把这个化工流程图转成 IDAES 模型：进料预热→反应器→闪蒸→精馏，产物回流
+  [PASS] rate=0/3 expected=False: 帮我用 Pyomo 优化一个供应链模型，做线性规划，涉及多个工厂和仓库的运输成本最小化，不涉及化工过程模拟
+  [PASS] rate=0/3 expected=False: write me a script to plot the vapor-liquid equilibrium curve
+  [PASS] rate=0/3 expected=False: 帮我写一个 Python 脚本做化工流程模拟，用纯 Pyomo 的 Block 和 Var 手动搭，不要用 IDAES 
+  [PASS] rate=0/3 expected=False: explain the difference between Peng-Robinson and Soave-Redli
+
+Improving description...
