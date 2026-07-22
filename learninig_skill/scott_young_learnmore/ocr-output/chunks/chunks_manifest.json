@@ -1,0 +1,29 @@
+{
+  "total_pages": 228,
+  "chunks": [
+    {
+      "file": "chunk_0001-0100.pdf",
+      "path": "/home/admin/books/learninig_skill/scott_young_learnmore/ocr-output/chunks/chunk_0001-0100.pdf",
+      "pdf_page_start": 1,
+      "pdf_page_end": 100,
+      "num_pages": 100,
+      "size_mb": 1.77
+    },
+    {
+      "file": "chunk_0101-0200.pdf",
+      "path": "/home/admin/books/learninig_skill/scott_young_learnmore/ocr-output/chunks/chunk_0101-0200.pdf",
+      "pdf_page_start": 101,
+      "pdf_page_end": 200,
+      "num_pages": 100,
+      "size_mb": 1.78
+    },
+    {
+      "file": "chunk_0201-0228.pdf",
+      "path": "/home/admin/books/learninig_skill/scott_young_learnmore/ocr-output/chunks/chunk_0201-0228.pdf",
+      "pdf_page_start": 201,
+      "pdf_page_end": 228,
+      "num_pages": 28,
+      "size_mb": 1.66
+    }
+  ]
+}

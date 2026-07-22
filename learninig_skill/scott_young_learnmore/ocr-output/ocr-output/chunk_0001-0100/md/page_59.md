@@ -1,0 +1,3 @@
+Answering “no” to any of these points should give a clear idea of what level your understanding is with this particular idea. You might have heard the information, understood it at a basic level and connected it with other ideas – but failed to search through and delete false connections. Therefore your current level of understanding is just beyond exploration.
+
+Testing isn’t a complicated process, but it requires a lot of self-awareness. Read over the description of the five phases again as you go through the techniques. That way you can better understand where you sit with any new idea you encounter.

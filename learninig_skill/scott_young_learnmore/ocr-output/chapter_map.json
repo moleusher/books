@@ -1,0 +1,46 @@
+{
+  "book": "Learn More Study Less — Scott Young (2008)",
+  "total_pdf_pages": 228,
+  "volumes": {
+    "main": {
+      "dir": "chapters",
+      "front_matter": {
+        "file": "00_Front_Matter.md",
+        "title": "Cover, Copyright & Table of Contents",
+        "pages": [1, 6]
+      },
+      "chapters": [
+        {
+          "file": "Ch01_Introduction_and_My_Story.md",
+          "title": "Introduction & My Story",
+          "pages": [7, 16]
+        },
+        {
+          "file": "Ch02_Part_I_The_Holistic_Learning_Strategy.md",
+          "title": "Part I: The Holistic Learning Strategy",
+          "pages": [17, 68]
+        },
+        {
+          "file": "Ch03_Information_Structures_and_Goals.md",
+          "title": "Information Structures & Goals for Learning",
+          "pages": [69, 90]
+        },
+        {
+          "file": "Ch04_Part_II_Holistic_Learning_Techniques.md",
+          "title": "Part II: Holistic Learning Techniques (Acquiring, Linking, Arbitrary, Extending)",
+          "pages": [91, 183]
+        },
+        {
+          "file": "Ch05_Part_III_Beyond_Holistic_Learning.md",
+          "title": "Part III: Beyond Holistic Learning (Productive Student & Self-Education)",
+          "pages": [184, 212]
+        },
+        {
+          "file": "Ch06_Part_IV_Summary_and_Quick_Guide.md",
+          "title": "Part IV: Summary & Quick Guide",
+          "pages": [213, 228]
+        }
+      ]
+    }
+  }
+}

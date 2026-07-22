@@ -1,0 +1,3 @@
+Nobody can make you interested in a class you find boring. No strategy can make you learn something you don't want to. If you're only chasing a piece of paper from a prestigious University, instead of the knowledge and ideas that paper represents, then I don't think any strategy can be helpful.
+
+Find your reason for learning. Even if the reason is as simple as curiosity, find a reason to want to know.

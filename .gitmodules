@@ -1,0 +1,3 @@
+[submodule "chemResearchAgent/ChemEagle"]
+	path = chemResearchAgent/ChemEagle
+	url = https://github.com/CYF2000127/ChemEagle.git
